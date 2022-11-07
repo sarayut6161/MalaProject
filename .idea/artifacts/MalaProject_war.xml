@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MalaProject:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MalaProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="MalaProject-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MalaProject:war exploded" />
+    </root>
+  </artifact>
+</component>
