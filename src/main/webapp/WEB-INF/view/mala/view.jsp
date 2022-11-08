@@ -14,13 +14,13 @@
     <div class="container">
         <nav>
             <ul>
-                <li><a href="update-form2">แก้ไข</a></li>
+                <li><a href="update-form">แก้ไข</a></li>
             </ul>
         </nav>
         <p>
-            <b>รหัสเครื่องดื่ม::</b><span>${beverage.beverageID}</span><br/>
-            <b>ชื่อ::</b><span>${beverage.beverageName}</span><br/>
-            <b>ราคา::</b><span>${beverage.bprice}</span><br/>
+            <b>รหัสหม่าล่า::</b><span>${mala.malaID}</span><br/>
+            <b>ชื่อ::</b><span>${mala.malaname}</span><br/>
+            <b>ราคา::</b><span>${mala.mprice}</span><br/>
 
         </p></div>
 </div>

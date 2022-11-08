@@ -4,7 +4,9 @@
 <head><title>${title}</title></head>
 <body><h1>${title}</h1>
 <div class="container">
-    <form:form action="update" modelAttribute="beverage"><label
+
+
+    <form:form action="update2" modelAttribute="beverage"><label
 
         for="beverageID"><b>รหัส</b>::</label><form:input path="beverageID" disabled="true"/><br/>
 
@@ -14,5 +16,7 @@
 
         <button type="submit">แก้ไข</button>
 </form:form></div>
+
+
 </body>
 </html>

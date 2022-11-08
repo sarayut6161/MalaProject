@@ -34,8 +34,10 @@
 </tr>
 <tr>
     <td>
-        ผู้ใช้ทั่วไป---><a href="${pageContext.request.contextPath}/type/type">คลิ๊ก </a>
-    </td>
+        ผู้ใช้ทั่วไป--->   <a href="${pageContext.request.contextPath}/mala/list">คลิ๊ก </a>
+
+
+    </td>z
 </tr>
 </body>
 </html>
