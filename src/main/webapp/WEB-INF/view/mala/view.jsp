@@ -8,7 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
-<head><title>${title}</title></head>
+<head><title>${title}</title>
+    <link  href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"></head>
 <body><h1>${title}</h1>
 <div class="container">
     <div class="container">

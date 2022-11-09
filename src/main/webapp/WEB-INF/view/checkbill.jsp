@@ -10,14 +10,16 @@
 <html>
 <head>
     <title>Title</title>
+    <link  href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
 </head>
+<form method="get" name="bill" id="bill"></form>
 <body>
 
     <table>
         <tr>
             <td>
                 hello
-            </td>
+            </td>s
         </tr>
     </table>
 

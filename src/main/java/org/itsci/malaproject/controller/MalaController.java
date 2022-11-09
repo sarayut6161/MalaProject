@@ -70,9 +70,11 @@ public class MalaController {
 
     @GetMapping("/list")
     public String ListMala (Model model) {
+        Order oder = new Order();
         model.addAttribute("mala", getMala());
         model.addAttribute("beverage", getBeverage());
         model.addAttribute("title", title + " -รายการ");
+        model.addAttribute("order", oder);
         return "mala/list";
     }
 
@@ -138,7 +140,7 @@ public class MalaController {
 //    }
 
 
-/*
+
 
     @GetMapping("/{beverageID}/viewbev")
     public String viewbev(@PathVariable("beverageID") String beverageID, Model model) {
@@ -171,7 +173,7 @@ public class MalaController {
         beverage.setBeverageName(b.getBeverageName());
         return "redirect:view";
     }
-*/
+
 
 
 

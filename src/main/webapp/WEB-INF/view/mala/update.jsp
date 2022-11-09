@@ -1,7 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
-<head><title>${title}</title></head>
+<head><title>${title}</title>
+    <link  href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet"></head>
 <body align="center"><h1>${title}</h1>
 <div class="container">
 

@@ -1,27 +1,52 @@
 package org.itsci.malaproject.model;
 import java.util.*;
-public class User {
-    private String Username;
-    private String Password;
+import javax.persistence.*;
 
-    public User(String username, String password) {
-        Username = username;
-        Password = password;
+@Entity
+@Table(name = "User")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "iduser", nullable = false)
+    private Integer iduser;
+
+    @Column(name = "username",nullable = false)
+    private String username;
+    @Column(name = "password",nullable = false)
+    private String password;
+
+    public Integer getIduser() {
+        return iduser;
+    }
+
+    public void setIduser(Integer iduser) {
+        this.iduser = iduser;
+    }
+
+
+    public User(Integer iduser, String username, String password) {
+        this.iduser = iduser;
+        this.username = username;
+        this.password = password;
+    }
+
+    public User() {
+
     }
 
     public String getUsername() {
-        return Username;
+        return username;
     }
 
     public void setUsername(String username) {
-        Username = username;
+        this.username = username;
     }
 
     public String getPassword() {
-        return Password;
+        return password;
     }
 
     public void setPassword(String password) {
-        Password = password;
+        this.password = password;
     }
 }

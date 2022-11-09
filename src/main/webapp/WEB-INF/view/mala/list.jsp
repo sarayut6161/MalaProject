@@ -1,12 +1,16 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head><title>${title}</title>
+    <link  href="${pageContext.request.contextPath}/assets/css/style.css" rel="stylesheet">
 
 </head>
 
 <body align="center"><h1>${title}</h1>
-<form name="send" id="sd" method="post" action="/">
+<form:form name="send" id="sd" method="post" action="${pageContext.request.contextPath}/bill/list" modelAttribute="order">
     <div class="container" >
         <table align="center" style="width: 500px">
             <thead>
@@ -65,42 +69,37 @@
 
             <tr>
                 <td colspan="4" style="text-align: center">หม่าล่า
-                    <input type="text"  id="sum" value="0" >
+                    <form:input type="text"  id="sum" value="0"  path="totalMala"/>
                 </td>
             </tr>
             <tr>
                 <td colspan="4" style="text-align: center">เบียร์
-                    <input type="text"  id="sum2" value="0" >
+                    <form:input type="text"  id="sum2" value="0"   path="totalBeverage"/>
                 </td>
 
             </tr>
             <tr>
-                <td>ราคารวม
-                    <input type="text" id="total" name="total" value="0">
+                <td colspan="4" style="text-align: center"> ราคารวม
+                    <form:input type="text" id="total" name="total" path="total"/>
                 </td>
             </tr>
-            <tr>
-                <td colspan="4" style="text-align: center">เลขโต๊ะ
-                    <input type="text" id="desk" name="desk" value="">
-                </td>
-            </tr>
-
             <tr>
                 <td colspan="4" style="text-align: center"><input type="button"  onclick="cal()" value=คำนวณ></td>
             </tr>
             <tr>
-                <td colspan="4" style="text-align: center">
-
-                  <button type="submit" id="sub" name="sub">เช็คบิล</button>
-
-
-
+                <td colspan="4" style="text-align: center">เลขโต๊ะ
+                    <form:input type="text"  id="table"  name ="table" path="tableOrder"/>
                 </td>
+            </tr>
+
+
+            <tr>
+                <td colspan="4" style="text-align: center"><input type="button"  onclick="bill()" value=คำนวณ></td>
             </tr>
         </table>
 
     </div>
-</form>
+</form:form>
 
 
 </body>
@@ -137,6 +136,11 @@
         document.getElementById("sum2").value=sum2+'';
 
         document.getElementById("total").value=sum+sum2;
+    }
+    function bill(){
+        var table = document.getElementById('table').value;
+        var total = document.getElementById('total').value;
+        return confirm('เลขโต๊ะ='+table+'ราคารวม='+total+'*****ขอบคุณที่ใช้บริการนะจ๊ะโอกาศหน้าเชิญใหม่*****');
     }
 </script>
 </html>

@@ -1,42 +1,82 @@
 package org.itsci.malaproject.model;
 import java.util.*;
+import javax.persistence.*;
+
+@Entity
+@Table (name= "OrderProduct")
 public class Order {
-    private int OrderID;
-    private int Table;
-    private int Total;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idorder", nullable = false)
+    private Integer idorder;
 
-    public Order(int orderID, int table, int total) {
-        OrderID = orderID;
-        Table = table;
+    @Column(name = "tableOrder", nullable = false)
+    private Integer tableOrder;
+    @Column(name = "total", nullable = false)
+    private Integer total;
 
-        Total = total;
+    @Column(name = "totalMala", nullable = false)
+    private Integer totalMala;
+
+    @Column(name = "totalBeverage", nullable = false)
+    private Integer totalBeverage;
+
+    public Order(Integer idorder, Integer tableOrder, Integer total, Mala mala, Beverage beverage) {
+        this.idorder = idorder;
+        this.tableOrder = tableOrder;
+        this.total = total;
+
     }
 
+    public Order() {
 
-
-
-
-    public int getOrderID() {
-        return OrderID;
     }
 
-    public void setOrderID(int orderID) {
-        OrderID = orderID;
+    public Integer getId() {
+        return idorder;
     }
 
-    public int getTable() {
-        return Table;
+    public void setId(Integer id) {
+        this.idorder = id;
     }
 
-    public void setTable(int table) {
-        Table = table;
+    public Integer getIdorder() {
+        return idorder;
     }
 
-    public int getTotal() {
-        return Total;
+    public void setIdorder(Integer idorder) {
+        this.idorder = idorder;
     }
 
-    public void setTotal(int total) {
-        Total = total;
+    public Integer getTableOrder() {
+        return tableOrder;
+    }
+
+    public void setTableOrder(Integer tableOrder) {
+        this.tableOrder = tableOrder;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+    public void setTotalMala(Integer totalMala) {
+        this.totalMala = totalMala;
+    }
+
+    public Integer getTotalBeverage() {
+        return totalBeverage;
+    }
+
+    public void setTotalBeverage(Integer totalBeverage) {
+        this.totalBeverage = totalBeverage;
+    }
+
+    public Integer getTotalMala() {
+        return totalMala;
     }
 }

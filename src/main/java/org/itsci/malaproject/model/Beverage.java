@@ -10,9 +10,9 @@ public class Beverage {
     @Id
     @Column(name = "BeverageID",nullable = false)
     private String BeverageID;
-    @Column(name = "BeverageName")
+    @Column(name = "BeverageName",nullable = false)
     private String BeverageName;
-    @Column(name = "Bprice")
+    @Column(name = "Bprice",nullable = false)
     private int Bprice;
 
     public Beverage(String beverageID, String beverageName, int bprice) {
